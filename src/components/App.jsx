@@ -4,7 +4,7 @@ import Cast  from "./Cast/Cast";
 import Reviews from "./Reviews/Reviews";
 import MovieDetailsPage from "./MovieDetailsPage/MovieDetailsPage";
 import MoviesPage from "./MoviesPage/MoviesPage";
-import FetchData from "services/FetchData";
+import FetchTrend from "services/FetchData";
 
 // const FetchMovies =FetchData();
 
@@ -12,9 +12,10 @@ export const App = () => {
   return (
     <>
     <Routes>
-      <Route path ="/" element ={ <HomePage/>}>
+      <Route path ="/" element ={ <HomePage/>}/>
         {/* <Route index element = {<Navigate to = "/movies"/>}/> */}
-        <Route path = "movies" element = {<MoviesPage/>}/>
+      <Route path = "movies" element = {<MoviesPage/>}>
+      <Route path=":moviesId" element = {<MovieDetailsPage/>}/>
       </Route>
     </Routes>
     </>

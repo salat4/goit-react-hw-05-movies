@@ -1,5 +1,5 @@
-import { FetchData } from "services/FetchData";
-import { Link  } from "react-router-dom";
+import { FetchTrend } from "services/FetchData";
+import { Link,Outlet  } from "react-router-dom";
 //import styles from "./HomePage.module.css"
 import styled from 'styled-components';
 
@@ -8,9 +8,7 @@ const Div = styled.div`
 display:flex;
 flex-direction:column ;
 `
-// const Div = styled
-
-FetchData().then((response)=>moviesObj = response)
+FetchTrend().then((response)=>moviesObj = response)
 const HomePage = () =>{
 const movies = moviesObj.results
 return(
@@ -27,6 +25,7 @@ return(
         } key = {movie.id}>{movie.title}
         </Link>
     ))}
+    <Outlet/>
     </Div>
 </div>
 
