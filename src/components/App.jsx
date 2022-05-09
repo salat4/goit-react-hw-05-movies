@@ -29,7 +29,7 @@ export const App = () => {
  <Suspense fallback={<div>Loading...</div>}>
     <Routes>
       <Route path ="/" element ={ <HomePage/>}/>
-        <Route path = "movies" element = {<MoviesPage/>}/>
+        <Route path = "/movies" element = {<MoviesPage/>}/>
         <Route path="movies/:movie_id/*" element = {<MovieDetailsPage/>}>
           <Route path = "cast" element = {<Cast/>}/>
           <Route path = "reviews" element = {<Reviews/>}/>
