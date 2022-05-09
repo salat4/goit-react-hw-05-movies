@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes, Route,NavLink } from "react-router-dom";
+import { Routes, Route,NavLink } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import styles from './App.module.css'
 const HomePage = lazy(()=> import("./HomePage/HomePage"))
