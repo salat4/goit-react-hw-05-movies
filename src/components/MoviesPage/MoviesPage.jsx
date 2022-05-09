@@ -1,4 +1,4 @@
-import { Link,Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as API from "services/FetchData";
 import styled from 'styled-components';
 
@@ -33,7 +33,7 @@ const MoviesPage = () => {
 return (
     <>
   
-    <Outlet/>
+    {/* <Outlet/> */}
 
     <form onSubmit={handleSubmit}>
         <input  type="text" name="query"></input>
