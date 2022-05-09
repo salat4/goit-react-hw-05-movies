@@ -1,23 +1,23 @@
 import * as API from "services/FetchData";
 import { useParams,Link,Outlet,useNavigate} from "react-router-dom";
-import { useEffect,useState,useRef } from "react";
+import { useEffect,useState } from "react";
 import image from "../../image/broken-1.png"
 import style from "./MovieDetailsPage.module.css"
 const MovieDetailsPage = () =>{
     const [movie, setMovie] = useState(null)
     let { movie_id } = useParams();
-    const mounted = useRef();
+    // const mounted = useRef();
 useEffect(()=>{
     async function FetchDetails(){
         const movie = await API.FetchDetails(movie_id)
         setMovie(movie)
     }
-    if(!mounted.current){
-        mounted.current = true
-          }
-          else {
+    // if(!mounted.current){
+    //     mounted.current = true
+    //       }
+    //       else {
     FetchDetails()
-          }
+        //   }
 },[movie_id])
 let navigate = useNavigate();
 
