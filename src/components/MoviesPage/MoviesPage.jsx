@@ -1,4 +1,4 @@
-import { Link,Outlet,useNavigate } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 import * as API from "services/FetchData";
 import styled from 'styled-components';
 
@@ -30,7 +30,6 @@ const MoviesPage = () => {
         setQuery(e.target.elements.query.value);
         e.target.reset();
     }
-let navigate = useNavigate();
 return (
     <>
   
