@@ -1,22 +1,16 @@
 import * as API from "services/FetchData";
 import { useParams} from "react-router-dom";
-import { useEffect,useState ,useRef} from "react";
+import { useEffect,useState } from "react";
 
 const Reviews = () =>{
     const [rewiews, setRewiews] = useState(null)
     let { movie_id } = useParams();
-    const mounted = useRef();
     useEffect(()=>{
         async function FetchRewiews(){
             const movie = await API.FetchRewiews(movie_id)
             setRewiews(movie)
         }
-        if(!mounted.current){
-            mounted.current = true
-              }
-              else {
         FetchRewiews()
-              }
     },[movie_id])
     console.log(rewiews)
     return(

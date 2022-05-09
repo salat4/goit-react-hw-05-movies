@@ -30,7 +30,7 @@ return(
                 <div className={style.top__div}>
                     {movie.poster_path === null ?
                      <img src={image} alt = "" width="200"></img>  :
-                     <img src ={`https:image.tmdb.org/t/p/w500/${movie.poster_path}`} alt = {movie.title} width = "300"/> 
+                     <img src ={`https:image.tmdb.org/t/p/w500${movie.poster_path}`} alt = {movie.title} width = "300"/> 
                      }
                   
             <div className={style.details}>
