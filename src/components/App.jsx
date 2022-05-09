@@ -1,4 +1,4 @@
-import { Routes, Route,NavLink } from "react-router-dom";
+import { BrowserRouter,Routes, Route,NavLink } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import styles from './App.module.css'
 const HomePage = lazy(()=> import("./HomePage/HomePage"))
@@ -19,7 +19,8 @@ export const App = () => {
   };
   return (
     <>
-    <NavLink to = "/" className={styles.home} style={({ isActive }) =>
+
+      <NavLink to = "/" className={styles.home} style={({ isActive }) =>
               isActive ? activeStyle : undefined
             }>Home</NavLink>
     <NavLink to = "/movies" style={({ isActive }) =>
@@ -36,6 +37,7 @@ export const App = () => {
       <Route path="*" element={<NotFound />} />  
     </Routes>
     </Suspense>
-    </>
+
+</>
   );
 };
