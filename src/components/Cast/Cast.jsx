@@ -23,7 +23,7 @@ const Cast = () =>{
                 <li key = {person.id}>{
                     person.profile_path === null ?      
                     <img src={image} alt = "" width="200"></img>  :
-                    <img src = {`https:image.tmdb.org/t/p/w500${person.profile_path}`} alt = "" width="200"/>
+                    <img src = {`https://image.tmdb.org/t/p/w500${person.profile_path}`} alt = "" width="200"/>
 
                 }
                     <p>{person.name}</p>
